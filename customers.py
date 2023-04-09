@@ -91,7 +91,7 @@ if check_password(password):
         message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
         st.write(message)
         
-     if action == 'Delete Customer':
+    if action == 'Delete Customer':
         name = st.text_input('Enter customer name')
        
 
