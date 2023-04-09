@@ -63,11 +63,6 @@ except:
 
 # Prompt the user to enter the password
 password = st.text_input('Enter password', type='password')
-
-# Check the password
-if check_password(password):
-    # Prompt the user to select an action
-    action = st.selectbox('Select an action', ['Add Customer', 'Delete Customer'])
     # Check the password
 if check_password(password):
     # Prompt the user to select an action
