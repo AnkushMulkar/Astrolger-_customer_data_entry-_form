@@ -90,3 +90,12 @@ if check_password(password):
     if st.button('Add Customer'):
         message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
         st.write(message)
+        
+     if action == 'Delete Customer':
+        name = st.text_input('Enter customer name')
+       
+
+    # Add the new customer when the "Add Customer" button is clicked
+    if st.button('Delete Customer'):
+        message = delete_customer(name)
+        st.write(message)    
