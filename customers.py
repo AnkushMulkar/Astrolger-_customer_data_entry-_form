@@ -18,7 +18,8 @@ def add_customer(name, gender, birthdate, birthplace, birth_time, address, city,
 
     # Add the new customer to the DataFrame
     new_customer = pd.DataFrame([[name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions]], columns=COLUMNS)
-    df = pd.concat([df, new_customer], ignore_index=True)
+    df = df.append(new_customer, ignore_index=True)
+
     # Write the updated DataFrame back to the Excel file
     with pd.ExcelWriter(EXCEL_FILE) as writer:
         df.to_excel(writer, index=False)
@@ -63,7 +64,8 @@ except:
 
 # Prompt the user to enter the password
 password = st.text_input('Enter password', type='password')
-    # Check the password
+
+# Check the password
 if check_password(password):
     # Prompt the user to select an action
     action = st.selectbox('Select an action', ['Add Customer', 'Delete Customer'])
@@ -81,23 +83,10 @@ if check_password(password):
         country = st.text_input('Enter customer country')
         occupation = st.text_input('Enter customer occupation')
         times_of_visit = st.text_input('Enter customer times of visit')
-        type_of_question = st.selectbox('Select customer type of question',['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career','other'])
+        type_of_question = st.selectbox('Select customer type of question',['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career'])
         number_of_questions = st.number_input('Enter number of questions', value=1)
-    elif action == 'Delete Customer':
-        name = st.text_input('Enter the name of the customer you want to delete')
-      
-    # Add the new customer when the "Add Customer" button is clicked
-    if action == 'Add Customer' and st.button('Add Customer'):
-        message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
-        st.write(message)
-    # Delete the customer when the "Delete Customer" button is clicked
-    elif action == 'Delete Customer' and st.button('Delete Customer'):
-        message = delete_customer(name)
-        st.write(message)
 
     # Add the new customer when the "Add Customer" button is clicked
     if st.button('Add Customer'):
         message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
         st.write(message)
-  
-    
