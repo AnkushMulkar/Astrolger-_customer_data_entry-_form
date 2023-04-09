@@ -89,3 +89,7 @@ if check_password(password):
     if st.button('Add Customer'):
         message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
         st.write(message)
+    # delete the customer when the "delete Customer" button is clicked
+    if st.button('delete Customer'):
+        message = delete customer(name)
+        st.write(message)
