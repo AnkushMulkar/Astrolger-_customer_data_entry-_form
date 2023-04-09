@@ -48,7 +48,7 @@ state = st.text_input('Enter customer state')
 country = st.text_input('Enter customer country')
 occupation = st.text_input('Enter customer occupation')
 times_of_visit = st.text_input('Enter customer times of visit')
-type_of_question = st.text_input('Enter customer type of question'['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career'])
+type_of_question = st.selectbox('Enter customer type of question'['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career'])
 number_of_questions = st.number_input('Enter number of questions', value=1)
 
 # Add the new customer when the "Add Customer" button is clicked
