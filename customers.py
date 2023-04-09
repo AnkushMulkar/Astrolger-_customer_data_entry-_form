@@ -18,8 +18,7 @@ def add_customer(name, gender, birthdate, birthplace, birth_time, address, city,
 
     # Add the new customer to the DataFrame
     new_customer = pd.DataFrame([[name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions]], columns=COLUMNS)
-    df = df.append(new_customer, ignore_index=True)
-
+    df = pd.concat([df, new_customer], ignore_index=True)
     # Write the updated DataFrame back to the Excel file
     with pd.ExcelWriter(EXCEL_FILE) as writer:
         df.to_excel(writer, index=False)
