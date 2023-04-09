@@ -83,4 +83,10 @@ if check_password(password):
         country = st.text_input('Enter customer country')
         occupation = st.text_input('Enter customer occupation')
         times_of_visit = st.text_input('Enter customer times of visit')
-        type_of_question = st.selectbox('Select customer type of question',['Job','marriage', 'business','family
+        type_of_question = st.selectbox('Select customer type of question',['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career'])
+        number_of_questions = st.number_input('Enter number of questions', value=1)
+
+    # Add the new customer when the "Add Customer" button is clicked
+    if st.button('Add Customer'):
+        message = add_customer(name, gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, times_of_visit, type_of_question, number_of_questions)
+        st.write(message)
