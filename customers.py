@@ -91,5 +91,5 @@ if check_password(password):
         st.write(message)
     # delete the customer when the "delete Customer" button is clicked
     if st.button('delete Customer'):
-        message = delete customer(name)
+        message = delete_customer(name)
         st.write(message)
