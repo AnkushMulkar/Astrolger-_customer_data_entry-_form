@@ -17,9 +17,9 @@ def add_customer(Name, date_of_visit, time_of_visit, new_old_customer, Gender, B
         df = pd.DataFrame(columns=COLUMNS)
 
     # Add the new customer to the DataFrame
-    new_customer = pd.DataFrame([[def add_customer(Name, date_of_visit, time_of_visit, new_old_customer, Gender, Birthdate, Birthplace, Birth_Time, Address, City, State, Country, Occupation, Type_of_Question, Number_of_Questions, Fees_per_Question, Total_Amount):
+    new_customer = pd.DataFrame([[def add_customer(Name, date_of_visit, time_of_visit, new_old_customer, Gender, Birthdate, Birthplace, Birth_Time, Address, City, State, Country, Occupation, Type_of_Question, Number_of_Questions, Fees_per_Question, Total_Amount):]], columns=COLUMNS)
     # Function body here
-]], columns=COLUMNS)
+
     df = df.append(new_customer, ignore_index=True)
 
     # Write the updated DataFrame back to the Excel file
