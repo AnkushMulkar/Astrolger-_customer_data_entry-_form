@@ -3,7 +3,7 @@ import pandas as pd
 
 # Define the path to the Excel file
 EXCEL_FILE = 'astrology_customers.xlsx'
-PASSWORD = 'password123'
+PASSWORD = 'mauli'
 
 # Define the column names for the customer information
 COLUMNS = ['name','Date of visit','Time of visit','Number of Visits','New/Old customer','Gender', 'Birthdate', 'Birthplace', 'Birth Time', 'Address', 'City', 'State', 'Country', 'Occupation', 'Type of Question', 'Number of Questions','Fees per question','Total Amount']
@@ -53,7 +53,7 @@ def check_password(password):
 
 
 # Create the Streamlit app
-st.markdown("<h1 style='text-align: center; color: red;'>गुरुमाऊली ज्योतिष वास्तू  कंसल्टंसी </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: orange;'>गुरुमाऊली ज्योतिष वास्तू  कंसल्टंसी </h1>", unsafe_allow_html=True)
 # Set the font for Marathi text
 st.markdown('<style>body{font-family: marathiFont, sans-serif;}</style>', unsafe_allow_html=True)
 # Display Marathi text with larger font size and centered
