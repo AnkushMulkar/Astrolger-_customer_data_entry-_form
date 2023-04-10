@@ -6,7 +6,7 @@ EXCEL_FILE = 'astrology_customers.xlsx'
 PASSWORD = 'password123'
 
 # Define the column names for the customer information
-COLUMNS = ['Name','Date of visit','Time of visit','Number of Visits','New/Old customer','Gender', 'Birthdate', 'Birthplace', 'Birth Time', 'Address', 'City', 'State', 'Country', 'Occupation', 'Type of Question', 'Number of Questions','Fees per question','Total Amount']
+COLUMNS = ['name','Date of visit','Time of visit','Number of Visits','New/Old customer','Gender', 'Birthdate', 'Birthplace', 'Birth Time', 'Address', 'City', 'State', 'Country', 'Occupation', 'Type of Question', 'Number of Questions','Fees per question','Total Amount']
 
 # Define a function to add a new customer to the Excel file
 def add_customer(name,date_visit,time_visit,number_visit,new_old_customer,gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, type_of_question, number_of_questions,fees_per_question,total_amount):
