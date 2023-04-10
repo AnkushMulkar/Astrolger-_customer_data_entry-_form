@@ -9,7 +9,7 @@ PASSWORD = 'password123'
 COLUMNS = ['Name','Date of Visit', 'Times of Visit','New/Old Customer', 'Gender', 'Birthdate', 'Birthplace', 'Birth Time', 'Address', 'City', 'State', 'Country', 'Occupation', 'Type of Question', 'Number of Questions','Fees per Question' ,'Total Amount']
 
 # Define a function to add a new customer to the Excel file
-def add_customer(Name,Date of Visit, Times of Visit ,New/Old Customer, Gender, Birthdate, Birthplace, Birth Time, Address, City, State, Country, Occupation, Type of Question, Number of Questions,Fees per Question ,Total Amount):
+def add_customer(Name,Date of Visit,Time of Visit,New/Old Customer,Gender,Birthdate,Birthplace,Birth Time,Address,City,State,Country,Occupation,Type of Question,Number of Questions,Fees per Question,Total Amount):
     # Read the Excel file into a DataFrame
     try:
         df = pd.read_excel(EXCEL_FILE)
@@ -17,7 +17,7 @@ def add_customer(Name,Date of Visit, Times of Visit ,New/Old Customer, Gender, B
         df = pd.DataFrame(columns=COLUMNS)
 
     # Add the new customer to the DataFrame
-    new_customer = pd.DataFrame([[Name,Date of Visit, Times of Visit,New/Old Customer, Gender, Birthdate, Birthplace, Birth Time, Address, City, State, Country, Occupation, Type of Question, Number of Questions,Fees per Question ,Total Amount]], columns=COLUMNS)
+    new_customer = pd.DataFrame([[Name,Date of Visit, Time of Visit,New/Old Customer, Gender, Birthdate, Birthplace, Birth Time, Address, City, State, Country, Occupation, Type of Question, Number of Questions,Fees per Question ,Total Amount]], columns=COLUMNS)
     df = df.append(new_customer, ignore_index=True)
 
     # Write the updated DataFrame back to the Excel file
@@ -74,7 +74,7 @@ if check_password(password):
     if action == 'Add Customer':
         Name = st.text_input('Enter customer name')
         Date of Visit = st.date_input('Enter customer Date of Visit')
-        Timee of Visit = st.time_input('Enter customer Time of Visit')
+        Time of Visit = st.time_input('Enter customer Time of Visit')
         New/Old Customer = st.selectbox('Select', ['New' , 'Old'])
         Gender = st.selectbox('Select customer gender', ['Male', 'Female', 'Other'])
         Birthdate = st.date_input('Enter customer birthdate')
@@ -92,7 +92,7 @@ if check_password(password):
 
     # Add the new customer when the "Add Customer" button is clicked
     if st.button('Add Customer'):
-        message = add_customer(Name,Date of Visit, Timee of Visit , Gender, Birthdate, Birthplace, Birth Time, Address, City, State, Country, Occupation, Type of Question, Number of Questions,Fees per Question ,Total Amount)
+        message = add_customer(Name,Date of Visit, Time of Visit , Gender, Birthdate, Birthplace, Birth Time, Address, City, State, Country, Occupation, Type of Question, Number of Questions,Fees per Question ,Total Amount)
         st.write(message)
         
     if action == 'Delete Customer':
