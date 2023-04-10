@@ -37,7 +37,7 @@ def delete_customer(name):
         return 'No customer data found'
 
     # Remove the customer from the DataFrame
-    df = df[df['Name'] != name]
+    df = df[df['name'] != name]
 
     # Write the updated DataFrame back to the Excel file
     with pd.ExcelWriter(EXCEL_FILE) as writer:
