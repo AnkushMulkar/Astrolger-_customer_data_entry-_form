@@ -56,8 +56,9 @@ def check_password(password):
 st.markdown("<h1 style='text-align: center; color: red;'>गुरुमाऊली ज्योतिष वास्तू  कंसल्टंसी </h1>", unsafe_allow_html=True)
 # Set the font for Marathi text
 st.markdown('<style>body{font-family: marathiFont, sans-serif;}</style>', unsafe_allow_html=True)
-# Display Marathi text with larger font size
-st.markdown("<p lang='mr' style='font-size:24px;'>जातकाची माहिती</p>", unsafe_allow_html=True)
+# Display Marathi text with larger font size and centered
+st.markdown("<p lang='mr' style='font-size:24px; text-align:center;'>जातकाची माहिती</p>", unsafe_allow_html=True)
+
 
 # Display the current contents of the Excel file
 try:
