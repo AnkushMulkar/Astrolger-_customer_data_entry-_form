@@ -57,7 +57,7 @@ st.markdown("<h1 style='text-align: center; color: red;'>गुरुमाऊ�
 # Set the font for Marathi text
 st.markdown('<style>body{font-family: marathiFont, sans-serif;}</style>', unsafe_allow_html=True)
 # Display Marathi text
-st.markdown("<p lang='mr'>जातकाची माहिती</p>", unsafe_allow_html=True)
+st.markdown("<p lang='mr'>"##**जातकाची माहिती**"</p>", unsafe_allow_html=True)
 
 
 # Display the current contents of the Excel file
