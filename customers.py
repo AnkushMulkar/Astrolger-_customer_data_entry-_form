@@ -101,6 +101,6 @@ if check_password(password):
         
     # Delete the customer when the "Delete Customer" button is clicked
     if st.button('Delete Customer'):
-        message = delete_customer(name,date_visit,time_visit,number_visit,new_old_customer,gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, type_of_question, number_of_questions,fees_per_question,total_amount)
+        message = delete_customer(name)
         st.write(message)
 
