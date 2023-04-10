@@ -89,7 +89,8 @@ if check_password(password):
         type_of_question = st.selectbox('Select customer type of question',['Job','marriage', 'business','family related', 'Ratn','Vastushastra','career'])
         number_of_questions = st.number_input('Enter number of questions', value=1)
         fees_per_question = st.selectbox('Select fees', ['100','200','300','400','500','600','700','800','900','1000','1500','2000','2500','3000'])
-        total_amount = int('number_of_questions') * int('fees_per_question')
+        total_amount = int(number_of_questions) * int(fees_per_question)
+
     # Add the new customer when the "Add Customer" button is clicked
     if st.button('Add Customer'):
         message = add_customer(name,date_visit,time_visit,number_visit,new_old_customer,gender, birthdate, birthplace, birth_time, address, city, state, country, occupation, type_of_question, number_of_questions,fees_per_question,total_amount)
