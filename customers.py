@@ -9,7 +9,7 @@ PASSWORD = 'password123'
 COLUMNS = ['Name','Date of Visit', 'Times of Visit','New/Old Customer', 'Gender', 'Birthdate', 'Birthplace', 'Birth Time', 'Address', 'City', 'State', 'Country', 'Occupation', 'Type of Question', 'Number of Questions','Fees per Question' ,'Total Amount']
 
 # Define a function to add a new customer to the Excel file
-def add_customer((Name, date_of_visit, time_of_visit, new_old_customer, Gender, Birthdate, Birthplace, Birth_Time, Address, City, State, Country, Occupation, Type_of_Question, Number_of_Questions, Fees_per_Question, Total_Amount):
+def add_customer(Name, date_of_visit, time_of_visit, new_old_customer, Gender, Birthdate, Birthplace, Birth_Time, Address, City, State, Country, Occupation, Type_of_Question, Number_of_Questions, Fees_per_Question, Total_Amount):
     # Read the Excel file into a DataFrame
     try:
         df = pd.read_excel(EXCEL_FILE)
