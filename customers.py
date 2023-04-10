@@ -53,7 +53,8 @@ def check_password(password):
 
 
 # Create the Streamlit app
-st.title('Astrology Customer Information')
+st.markdown("<h1 style='text-align: center; color: red;'>Gurumauli Jyotish Vastu Consultancy</h1>", unsafe_allow_html=True)
+st.markdown('JATAK Information')
 
 # Display the current contents of the Excel file
 try:
