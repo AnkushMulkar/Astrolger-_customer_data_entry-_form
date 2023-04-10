@@ -73,14 +73,14 @@ if check_password(password):
     # Prompt the user to enter customer information
     if action == 'Add Customer':
         name = st.text_input('Enter customer name')
-        date_visit = st.date_input('Enter customer date of visit')
-        time_visit = st.text_input('Enter customer birth time')
+        date_visit = st.date_input('Enter customer date of visit', key='date_visit')
+        time_visit = st.text_input('Enter customer birth time', key='time_visit')
         number_visit = st.text_input('Enter customer times of visit')
         new_old_customer = st.selectbox('Select new/old customer', ['New','Old'])
         gender = st.selectbox('Select customer gender', ['Male', 'Female', 'Other'])
-        birthdate = st.date_input('Enter customer birthdate')
+        birthdate = st.date_input('Enter customer birthdate', key='birthdate')
         birthplace = st.text_input('Enter customer birthplace')
-        birth_time = st.text_input('Enter customer birth time')
+        birth_time = st.text_input('Enter customer birth time', key='birth_time')
         address = st.text_input('Enter customer address')
         city = st.text_input('Enter customer city')
         state = st.text_input('Enter customer state')
