@@ -54,6 +54,8 @@ def check_password(password):
 
 # Create the Streamlit app
 st.markdown("<h1 style='text-align: center; color: orange;'>गुरुमाऊली ज्योतिष वास्तू  कंसल्टंसी </h1>", unsafe_allow_html=True)
+st.write("Created by [Ankush Mulkar](https://www.linkedin.com/in/ankush-mulkar-ab539454/)")
+
 # Set the font for Marathi text
 st.markdown('<style>body{font-family: marathiFont, sans-serif;}</style>', unsafe_allow_html=True)
 # Display Marathi text with larger font size and centered
